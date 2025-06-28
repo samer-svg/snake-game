@@ -5,15 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Snake Game</title>
   <link rel="stylesheet" href="style.css">
-  <script type="module" src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <div class="game-details">
-      <span class="score">score : 0</span>
-      <span class="high-score">high score : 10</span>
+  <div class="game-container">
+    <header class="game-header">
+      <h1 class="game-title">🐍 Snake Game</h1>
+      <p class="game-subtitle">Use arrow keys or swipe to control the snake</p>
+    </header>
+    
+    <div class="container">
+      <div class="game-details">
+        <div class="score-container">
+          <span class="score-label">Score</span>
+          <span class="score">0</span>
+        </div>
+        <div class="high-score-container">
+          <span class="high-score-label">Best</span>
+          <span class="high-score">10</span>
+        </div>
+      </div>
+      
+      <div class="game-board">
+        <div class="game-overlay" id="gameOverlay">
+          <div class="overlay-content">
+            <h2>Game Over!</h2>
+            <p>Your final score: <span class="final-score" id="finalScore">0</span></p>
+            <p>Best score: <span class="final-score" id="bestScore">0</span></p>
+            <button class="restart-btn" id="restartBtn">🎮 Play Again</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="controls-info">
+        <div class="control-item">
+          <span class="control-key">↑</span>
+          <span class="control-text">Up</span>
+        </div>
+        <div class="control-item">
+          <span class="control-key">↓</span>
+          <span class="control-text">Down</span>
+        </div>
+        <div class="control-item">
+          <span class="control-key">←</span>
+          <span class="control-text">Left</span>
+        </div>
+        <div class="control-item">
+          <span class="control-key">→</span>
+          <span class="control-text">Right</span>
+        </div>
+      </div>
     </div>
-    <div class="game-board"></div>
   </div>
 </body>
 </html>
